@@ -463,6 +463,16 @@ angular.module('lumx.tabs', [])
                     scope.lxTabHeading = newValue;
                 });
 
+                attrs.$observe('headingBgc', function(newValue)
+                {
+                    scope.lxTabHeadingTc = newValue;
+                });
+
+                attrs.$observe('headingTc', function(newValue)
+                {
+                    scope.lxTabHeadingTc = newValue;
+                });
+
                 attrs.$observe('icon', function(newValue)
                 {
                     scope.lxTabIcon = newValue;
