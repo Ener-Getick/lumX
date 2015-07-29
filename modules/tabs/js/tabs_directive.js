@@ -465,7 +465,7 @@ angular.module('lumx.tabs', [])
 
                 attrs.$observe('headingBgc', function(newValue)
                 {
-                    scope.lxTabHeadingTc = newValue;
+                    scope.lxTabHeadingBgc = newValue;
                 });
 
                 attrs.$observe('headingTc', function(newValue)
