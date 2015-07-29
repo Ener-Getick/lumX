@@ -42,7 +42,7 @@
         color: $white-1;
     }
 
-    .tabs-link {
+    .tabs__links li {
         color: $white-2;
     }
 
@@ -61,7 +61,7 @@
         color: $black-1;
     }
 
-    .tabs-link {
+    .tabs__links li {
         color: $black-2;
     }
 }
@@ -106,9 +106,9 @@
 .tabs--no-divider:after {
     display: none;
 }
-    
+
     // Tabs links
-    .tabs__links {
+    .tabs__links li {
         position: relative;
         @extend %bare-list;
     }

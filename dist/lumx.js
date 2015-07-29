@@ -3110,7 +3110,7 @@ angular.module('lumx.tabs', [])
 
                 attrs.$observe('headingBgc', function(newValue)
                 {
-                    scope.lxTabHeadingTc = newValue;
+                    scope.lxTabHeadingBgc = newValue;
                 });
 
                 attrs.$observe('headingTc', function(newValue)
@@ -3649,9 +3649,9 @@ angular.module("lumx.tabs").run(['$templateCache', function(a) { a.put('tabs.htm
     '      <i class="mdi mdi-chevron-left"></i>\n' +
     '    </button>\n' +
     '\n' +
-    '    <ul class="tabs__links bgc-{{ tab.lxTabHeadingBgc || lxTabsLinksBgc }} z-depth{{ lxTabsZDepth }}"\n' +
-    '        ng-class="{\'tabs__pagination-padding\': lxTabsIsPaginationActive(), \'tc-\'+lxTabHeadingTc : lxTabHeadingTc}">\n' +
-    '        <li ng-repeat="tab in lxTabsGetTabs() track by $index">\n' +
+    '    <ul class="tabs__links bgc-{{ lxTabsLinksBgc }} z-depth{{ lxTabsZDepth }}"\n' +
+    '        ng-class="{\'tabs__pagination-padding\': lxTabsIsPaginationActive()}">\n' +
+    '        <li ng-repeat="tab in lxTabsGetTabs() track by $index" ng-class="{\'bgc-\'+tab.lxTabHeadingBgc: tab.lxTabHeadingBgc, \'tc-\'+tab.lxTabHeadingTc : tab.lxTabHeadingTc}">\n' +
     '            <a lx-tab-link\n' +
     '               class="tabs-link"\n' +
     '               ng-class="{ \'tabs-link--is-active\': $index === lxTabsActiveTab }"\n' +
