@@ -8,9 +8,9 @@
       <i class="mdi mdi-chevron-left"></i>
     </button>
 
-    <ul class="tabs__links bgc-{{ tab.lxTabHeadingBgc || lxTabsLinksBgc }} z-depth{{ lxTabsZDepth }}"
-        ng-class="{'tabs__pagination-padding': lxTabsIsPaginationActive(), 'tc-'+lxTabHeadingTc : lxTabHeadingTc}">
-        <li ng-repeat="tab in lxTabsGetTabs() track by $index">
+    <ul class="tabs__links bgc-{{ lxTabsLinksBgc }} z-depth{{ lxTabsZDepth }}"
+        ng-class="{'tabs__pagination-padding': lxTabsIsPaginationActive()}">
+        <li ng-repeat="tab in lxTabsGetTabs() track by $index" ng-class="{'bgc-'+tab.lxTabHeadingBgc: tab.lxTabHeadingBgc, 'tc-'+tab.lxTabHeadingTc : tab.lxTabHeadingTc}">
             <a lx-tab-link
                class="tabs-link"
                ng-class="{ 'tabs-link--is-active': $index === lxTabsActiveTab }"
